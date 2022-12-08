@@ -336,13 +336,13 @@ app.post("/login", (req,res) => {
     }) 
 });
 
-app.get("/logout", (req,res) => {
-    req.session.reset();
-    res.redirect("/");
-});
 
 app.get("/userHistory", ensureLogin, (req,res) => {
     res.render("userHistory", {user:req.session.user} );
+});
+app.get("/logout", (req,res) => {
+    req.session.reset();
+    res.redirect("/");
 });
 
 app.use((req, res) => {
@@ -358,8 +358,3 @@ blogData.initialize()
 }).catch((err) => {
     console.log(err);
 })
-//_________________________________________________________________________________
-
-
-
-//___________________________________________________________________________________

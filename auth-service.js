@@ -10,13 +10,13 @@ var userSchema = new Schema({
         "userAgent": String
     }
 });
-let User; // to be defined on new connection (see initialize)
+let User; 
 
 module.exports.initialize = function () {
     return new Promise(function (resolve, reject) {
-        let db = mongoose.createConnection("mongodb+srv://khushmeet754:password1234@seneca.vfcqcuz.mongodb.net/?retryWrites=true&w=majority")
-        db.on('error', (err) => {
-            reject(err); 
+        let db = mongoose.createConnection("mongodb+srv://dbs311khus:password1234@seneca.vfcqcuz.mongodb.net/?retryWrites=true&w=majority")
+        db.on('error', (error) => {
+            reject(error); 
         });
         db.once('open', () => {
             User = db.model("users", userSchema);
