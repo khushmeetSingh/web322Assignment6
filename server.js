@@ -1,3 +1,16 @@
+// *********************************************************************************
+// *  WEB322 – Assignment 06
+// *  I declare that this assignment is my own work in accordance with Seneca  Academic Policy.  No part
+// *  of this assignment has been copied manually or electronically from any other source
+// *  (including 3rd party web sites) or distributed to other students.
+// *
+// *  Name: Khushmeet Singh Student ID: 138199211 Date: 7 DEC 2022
+// *
+// *  Cyclic Web App URL: https://wicked-twill-toad.cyclic.app/posts
+// *
+// *  GitHub Repository URL: https://github.com/khushmeetSingh/web322Assignment6
+// *
+// ********************************************************************************/
 const express = require('express');
 const blogData = require("./blog-service");
 const multer = require("multer");
